@@ -13,7 +13,7 @@ LastModified: 29-May-2017
 %%
 
 In this fragment you need to replace:
-  ##CompanyID##
+  Buster
   ##AppName##
   ##ClassID##
   ##ServiceName## 
@@ -26,9 +26,9 @@ This fragment depends on references:
 --> 
   <Monitoring>
     <Monitors>
-      <UnitMonitor ID="##CompanyID##.##AppName##.##ServiceName##.Service.Monitor" Accessibility="Public" Enabled="true" Target="##ClassID##" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.CheckNTServiceStateMonitorType" ConfirmDelivery="false">
+      <UnitMonitor ID="Buster.##AppName##.##ServiceName##.Service.Monitor" Accessibility="Public" Enabled="true" Target="##ClassID##" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.CheckNTServiceStateMonitorType" ConfirmDelivery="false">
         <Category>AvailabilityHealth</Category>
-        <AlertSettings AlertMessage="##CompanyID##.##AppName##.##ServiceName##.Service.Monitor.Alert.Message">
+        <AlertSettings AlertMessage="Buster.##AppName##.##ServiceName##.Service.Monitor.Alert.Message">
           <AlertOnState>Error</AlertOnState>
           <AutoResolve>true</AutoResolve>
           <AlertPriority>Normal</AlertPriority>
@@ -52,23 +52,23 @@ This fragment depends on references:
   </Monitoring>
   <Presentation>
     <StringResources>
-      <StringResource ID="##CompanyID##.##AppName##.##ServiceName##.Service.Monitor.Alert.Message" />
+      <StringResource ID="Buster.##AppName##.##ServiceName##.Service.Monitor.Alert.Message" />
     </StringResources>
   </Presentation>  
   <LanguagePacks>
     <LanguagePack ID="ENU" IsDefault="true">
       <DisplayStrings>
-        <DisplayString ElementID="##CompanyID##.##AppName##.##ServiceName##.Service.Monitor">
-          <Name>##CompanyID## ##AppName## ##ServiceName## Service Monitor</Name>
+        <DisplayString ElementID="Buster.##AppName##.##ServiceName##.Service.Monitor">
+          <Name>Buster ##AppName## ##ServiceName## Service Monitor</Name>
         </DisplayString>
-        <DisplayString ElementID="##CompanyID##.##AppName##.##ServiceName##.Service.Monitor" SubElementID="Running">
+        <DisplayString ElementID="Buster.##AppName##.##ServiceName##.Service.Monitor" SubElementID="Running">
           <Name>Running</Name>
         </DisplayString>
-        <DisplayString ElementID="##CompanyID##.##AppName##.##ServiceName##.Service.Monitor" SubElementID="NotRunning">
+        <DisplayString ElementID="Buster.##AppName##.##ServiceName##.Service.Monitor" SubElementID="NotRunning">
           <Name>Not Running</Name>
         </DisplayString>
-        <DisplayString ElementID="##CompanyID##.##AppName##.##ServiceName##.Service.Monitor.Alert.Message">
-          <Name>##CompanyID## ##AppName## ##ServiceName## service is not running</Name>
+        <DisplayString ElementID="Buster.##AppName##.##ServiceName##.Service.Monitor.Alert.Message">
+          <Name>Buster ##AppName## ##ServiceName## service is not running</Name>
           <Description>Service {0} is not running on {1}</Description>
         </DisplayString>
       </DisplayStrings>
